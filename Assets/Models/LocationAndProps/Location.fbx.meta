@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: b8eb22ba4cb9f2a429bb6347394e2eea
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bochka
+    second: {fileID: 2100000, guid: c1668e6c38dcf4545a29df5402d76e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Box
+    second: {fileID: 2100000, guid: 80960009bd95d944ba902e25af34616d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PBRBochka
+    second: {fileID: 2100000, guid: c1668e6c38dcf4545a29df5402d76e08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PBRBox
+    second: {fileID: 2100000, guid: 80960009bd95d944ba902e25af34616d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PBRWall
+    second: {fileID: 2100000, guid: 72430045cb483df42887c347bd45331b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall
+    second: {fileID: 2100000, guid: 50299797a43035d4ab7d7d454a91951e, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bochka_DefaultMaterial_Diffuse
+    second: {fileID: 2800000, guid: 9705a7eac12e2d048849b1142b46ecfe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bochka_DefaultMaterial_Glossiness
+    second: {fileID: 2800000, guid: 5e0668acee10bba4b9605c1750960018, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bochka_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 72edaa481e470a04f9418609e8cfc8f0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Bochka\u041D\u043E\u0440\u043C\u0430\u043B\u0438"
+    second: {fileID: 2800000, guid: e20957f52f22fb641a461e4ad7991aff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Bochka\u0426\u0432\u0435\u0442_\u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438"
+    second: {fileID: 2800000, guid: 43dfc63d790a62449b80635e656ed535, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Box_DefaultMaterial_Diffuse_1
+    second: {fileID: 2800000, guid: 715e7f9b5a34b2a4bbe3b26530520f87, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Box_DefaultMaterial_Glossiness
+    second: {fileID: 2800000, guid: 519b20d4d0b691e4b94b0835e8b77b16, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Box_DefaultMaterial_Normal_1
+    second: {fileID: 2800000, guid: c34b33bfad134a347b542d280aea0978, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Box\u041D\u043E\u0440\u043C\u0430\u043B\u0438"
+    second: {fileID: 2800000, guid: 82fcddb18e5591b49b0c0b50454c58ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Box\u0426\u0432\u0435\u0442_\u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438"
+    second: {fileID: 2800000, guid: 1f41e580d5bd7ca4382fbfabf1c48576, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_DefaultMaterial_Diffuse
+    second: {fileID: 2800000, guid: 99a3780a1483d9843903e144e80dad0e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_DefaultMaterial_Glossiness
+    second: {fileID: 2800000, guid: 05d0e293aa62b68419bff803f7175952, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wall_DefaultMaterial_Normal
+    second: {fileID: 2800000, guid: 4ba9a415647b87e468f3228a3d968b90, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Wall\u041D\u043E\u0440\u043C\u0430\u043B\u0438"
+    second: {fileID: 2800000, guid: 4ed0726e3e3e8984fa58ee607eda0159, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "Wall\u0426\u0432\u0435\u0442_\u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u0438"
+    second: {fileID: 2800000, guid: c0eab5262f3770b4c84885b70ad65a77, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
