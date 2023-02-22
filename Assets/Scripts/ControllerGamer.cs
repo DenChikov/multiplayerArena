@@ -33,6 +33,7 @@ public class ControllerGamer : NetworkBehaviour
 
 
     [SerializeField] private TextMesh nickName;
+    [SerializeField] private Text id;
     [SyncVar(hook = nameof(OnNameChanged))] private string playerName;
     [SerializeField] private GameObject nickInfo;
     private Animator playerAnimator;
@@ -46,17 +47,16 @@ public class ControllerGamer : NetworkBehaviour
 
     [SerializeField] private GameObject rayCastDot;//dot spawn ray
     [SerializeField] private float rayDistance = 10f;
-    [SerializeField] private int dashForWin = 3;//кол-во попаданий для победы
+    public int dashForWin = 3;//кол-во попаданий для победы
 
 
     private LayerMask maskPlayer;//mask for hit ray
     private InteractionDash changeColor;//call method change color
     protected Renderer[] material;
 
-    private int dashHit = 0;//кол-во попаданий по противнику
+    public int dashHit = 0;//кол-во попаданий по противнику
     private float dashSpeed;//speed
     private float dashTime;// таймер рывка
-    private Text namePlayerWin;
     [SerializeField] private TrailRenderer dashEffect;
 
 
@@ -64,6 +64,7 @@ public class ControllerGamer : NetworkBehaviour
     public static UnityEvent winCall = new UnityEvent();
     public void OnNameChanged(string _Old, string _New)
     {
+        id.text = playerName;
         nickName.text = playerName;
     }
     public override void OnStartLocalPlayer()
@@ -71,13 +72,29 @@ public class ControllerGamer : NetworkBehaviour
         string name = "Player" + Random.Range(0, 999);
         CmdSetupPlayer(name);
     }
+
+    [Command] private void CmdId()
+    {
+        RpcId();
+    }
+    [ClientRpc] void RpcId()
+    {
+        Timer();
+    }
+    IEnumerator Timer()
+    {
+        id.enabled = true;
+        yield return new WaitForSeconds(3f);
+        id.enabled = false;
+    }
     [Command]
     public void CmdSetupPlayer(string _name)
-    {
+    { 
         playerName = _name;
     }
     private void Start()
     {
+
         if (isLocalPlayer)
         {
             playerVirtualCamera = CinemachineVirtualCamera.FindObjectOfType<CinemachineVirtualCamera>();
@@ -85,13 +102,11 @@ public class ControllerGamer : NetworkBehaviour
             playerVirtualCamera.Follow = targetLookUp.transform;
             maskPlayer = LayerMask.GetMask("Players");
             dashTime = 3f;
-            namePlayerWin = NetworkClient.localPlayer.GetComponentInChildren<Text>();
             playerAnimator = NetworkClient.localPlayer.GetComponent<Animator>();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             playerController = NetworkClient.localPlayer.GetComponent<CharacterController>();
         }
-        Debug.Log(isLocalPlayer);
     }
     private void Update()
     {
@@ -114,11 +129,10 @@ public class ControllerGamer : NetworkBehaviour
             }
             if (dashHit >= dashForWin)
             {
-                CmdWinPlayer();
+                CmdId();
                 winCall.Invoke();
                 dashHit = 0;
-
-            }
+            } 
             Debug.DrawRay(rayCastDot.transform.position, rayCastDot.transform.forward * rayDistance);
             if (Input.GetKeyDown(dashButton))
             {
@@ -128,17 +142,6 @@ public class ControllerGamer : NetworkBehaviour
             Controller();
             GravityPhysic();
         }
-    }
-    [Command]
-    private void CmdWinPlayer()
-    {
-        RpcWinPlayer();
-    }
-    [ClientRpc]
-    private void RpcWinPlayer()
-    {
-        namePlayerWin.enabled = true;
-        namePlayerWin.text = "Win: " + playerName;
     }
     private void DashLogic()
     {
